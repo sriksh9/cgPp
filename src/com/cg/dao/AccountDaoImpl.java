@@ -100,7 +100,7 @@ public class AccountDaoImpl implements AccountDao{
 			addTransaction(StaticDB.getAccount().get(accNo1).getTransId(0), ts1);
 			StaticDB.getAccount().get(accNo2).setTransId(tid);
 			Transaction ts2 = new Transaction("Transfer",amt,StaticDB.getAccount().get(accNo2).getAccBal(),dtf.format(now));
-			addTransaction(StaticDB.getAccount().get(accNo1).getTransId(0), ts1);
+			addTransaction(StaticDB.getAccount().get(accNo2).getTransId(0), ts2);
 			
 			return true;
 		}
